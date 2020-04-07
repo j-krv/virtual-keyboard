@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.keyboard {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 56% / 2);
+    display: flex;
+    justify-content: center;
+    width: 56%;
+    background-color: #ececec;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.keyboard-keys {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.keyboard-key {
+    box-shadow: 0 0 3px -1px rgba(0,0,0,.3);
+    height: 40px;
+    width: 5.8%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: #fff;
+    border-bottom: 1px solid #b5b5b5;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    outline: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.keyboard-key--wide {
+    width: 12%;
+    max-width: 130px;
+}
+
+.keyboard-key--extra-wide {
+    width: 51%;
+    max-width: 500px;
+}
+
+.keyboard-key--activatable::after {
+    content: '';
+    position: relative;
+    left: 21%;
+    bottom: 10px;
+    width: 7px;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard-key--active::after {
+    background-color: #C6FE24;
+}
+
+.use-keyboard-input {
+    width: 56%;
+    height: 30%;
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 56% / 2);
+    padding: 1.25em;
+    resize: none;
+    outline: none;
+    border: 10px solid #ABB2B9;
+    border-radius: 5px;
+    background: #F2F3F4;
+}
+
+.active {
+    background-color: #D1F2EB;
+    border-radius: 25%;
+}
+
+p {
+    position: absolute;
+    left: 22%;
+    bottom: 15%;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+}
